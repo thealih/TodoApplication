@@ -1,7 +1,13 @@
 const NavBar = ({ unCompletedTodos }) => {
   return (
     <header>
-      <span>{unCompletedTodos}</span> <h2> are not completed</h2>
+      {unCompletedTodos ? (
+        <>
+          <span>{unCompletedTodos}</span> <h2> are not completed</h2>
+        </>
+      ) : (
+        <h2>set your today todos</h2>
+      )}
     </header>
   );
 };

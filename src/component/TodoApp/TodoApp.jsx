@@ -1,5 +1,5 @@
 import { useState } from "react";
-import NavBar from "../Navbar/NavBar.jsx";
+import NavBar from "../NavBar/NavBar";
 import TodoForm from "../TodoForm/TodoForm";
 import TodoList from "../TodoList/TodoList";
 const TodoApp = () => {
