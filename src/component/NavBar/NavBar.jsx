@@ -1,13 +1,15 @@
-const NavBar = ({ unCompletedTodos }) => {
+import { useState } from "react";
+
+const NavBar = ({ unCompletedTodos, onSelect, status }) => {
+  if (!unCompletedTodos) return <h2>set your today todos</h2>;
   return (
     <header>
-      {unCompletedTodos ? (
-        <>
-          <span>{unCompletedTodos}</span> <h2> are not completed</h2>
-        </>
-      ) : (
-        <h2>set your today todos</h2>
-      )}
+      <span>{unCompletedTodos}</span> <h2> are not completed</h2>
+      <select onChange={onSelect} value={status}>
+        <option value="All">All</option>
+        <option value="Completed">Completed</option>
+        <option value="Uncompleted">Uncompleted</option>
+      </select>
     </header>
   );
 };
